@@ -35,3 +35,12 @@
 // }
 // fn3();
 // fn1();
+
+console.log("start")
+setTimeout(() => {
+    console.log("timer1")
+}, 2000);
+setTimeout(() => {
+    console.log("timer2")
+}, 0);
+console.log("end")
