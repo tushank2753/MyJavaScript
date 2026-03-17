@@ -8,16 +8,26 @@ debugger
 // processUser(greet);
 
 
-function calculate(a, b, operation) {
-    return operation(a, b)
-}
-function add(x, y) {
-    return x + y
-}
-function multiply(x, y) {
-    return x * y
-}
-console.log(calculate(5, 3, add))
-console.log(calculate(5, 3, multiply))
+// function calculate(a, b, operation) {
+//     return operation(a, b)
+// }
+// function add(x, y) {
+//     return x + y
+// }
+// function multiply(x, y) {
+//     return x * y
+// }
+// console.log(calculate(5, 3, add))
+// console.log(calculate(5, 3, multiply))
 
-console.log("Program End")
+// console.log("Program End")
+
+
+function multiplyBy(num) {
+  return function(x) {
+    return x * num;
+  }
+}
+
+let double = multiplyBy(2);
+console.log(double(5));
