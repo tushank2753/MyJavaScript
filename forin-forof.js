@@ -1,0 +1,12 @@
+debugger
+// const arr = [10, 20, 30];
+
+// for (let value of arr) {
+//   console.log(value);
+// }
+
+// const str = "hello";
+
+// for (let ch of str) {
+//   console.log(ch);
+// }
