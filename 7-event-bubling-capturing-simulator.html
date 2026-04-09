@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="7-event-bubling-capturing-simulator.js" defer></script>
+  </head>
+  <style>
+    .pink,
+    .green,
+    .blue {
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 100px;
+      height: 120px;
+      background-color: pink;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 36px;
+    }
+    #addon {
+      width: 70px;
+      height: 74px;
+      background-color: #c0f5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 36px;
+      position: absolute;
+      top: 15px;
+      right: 100px;
+      bottom: 111px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div
+      class="pink"
+      style="width: 200px; height: 200px; background-color: pink"
+    >
+      <div
+        class="green"
+        style="width: 150px; height: 150px; background-color: green"
+      >
+        <div
+          class="blue"
+          style="width: 100px; height: 100px; background-color: blue"
+        ></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div  id="addon">+</div>
+      <!-- .card*100{$} -->
+    </div>
+  </body>
+</html>
