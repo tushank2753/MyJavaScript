@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.container {
+  height: 650px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #b5fab5;
+  border-radius: 20px;
+  border: 1px solid black;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.6);
+}
+.container h1 span {
+  color: rgb(48, 145, 0);
+}
+.linethroug{
+  text-decoration: line-through;
+}
+.main-progressbar {
+  height: 10px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.progressbar {
+  height: 10px;
+  width: 0%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f6be64;
+  transition: all 0.5s;
+}
+.card {
+  width: 350px;
+  height: 460px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e0dfdf;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.task-container {
+  height: 300px;
+  border: 1px solid black;
+  padding: 25px 10px;
+  border-radius: 10px;
+  background-color: white;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  margin-bottom: 35px;
+  border: 1px solid #a2a2a2;
+  border-radius: 10px;
+}
+
+.box #check {
+  min-width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 15px;
+  top: 3px;
+  cursor: pointer;
+}
+.box #addTask {
+  width: 200px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+}
