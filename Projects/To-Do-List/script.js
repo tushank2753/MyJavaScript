@@ -13,28 +13,33 @@ goalInput.forEach((task, index) => {
    task.value = localStorage.getItem(`taskName-${index}`)
 })
 
+checkBox.forEach((checkbox, index) => {
+    const savevalue = localStorage.getItem(`checkbox-${index}`)
+    if(savevalue === 'true'){
+        checkbox.checked = true
+        goalInput[index].classList.add('linethrough')
+    }
 
-checkBox.forEach((chekbox, index) => {
-    chekbox.addEventListener('change', () => {
-        if (chekbox.checked){
-            goalInput[index].classList.add('linethroug')
+    checkbox.addEventListener('change', () => {
+        localStorage.setItem(`checkbox-${index}`, checkbox.checked)
+
+        if (checkbox.checked){
+            goalInput[index].classList.add('linethrough')
         } else{
-            goalInput[index].classList.remove('linethroug')
+            goalInput[index].classList.remove('linethrough')
         }
-
-        let count = 0
-        checkBox.forEach((checkb) => {
-            if (checkb.checked) {
-                count++;
-            }
-        })
-        let progress = `${ (count / checkBox.length) * 100}%`
-        progressBar.style.width = progress
+        updateprogress() 
     })
 })
 
-checkBox.forEach((chekbox, index) => {
-    if (chekbox.checked){
-            goalInput[index].classList.add('linethroug')
-        } 
-})
+function updateprogress(){
+    let count = 0
+    checkBox.forEach((checkb) => {
+        if (checkb.checked) {
+            count++;
+        }
+    })
+    let progress = `${ (count / checkBox.length) * 100}%`
+    progressBar.style.width = progress
+}
+updateprogress()
