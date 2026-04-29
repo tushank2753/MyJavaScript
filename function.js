@@ -52,9 +52,32 @@
 // }
 // introduceMe()
 
-// debugger
-// function add (a , b){
-//     return a + b
-// }
-// add(add(2, 3), add(3, 5))
+debugger
+function add (a , b){
+    console.log(a+b)
+    return a + b
+}
+add(add(2, 3), add(3, 5))
 // console.log('Program Ended');
+
+
+/
+// myfun()
+// var myfun = () => {
+//     console.log('one')
+// }
+// myfun()
+// function myfun() {
+//     console.log('two')
+// }
+// myfun()
+
+// document.getElementById('parent').addEventListener('click', (e) => {
+//     console.log('clicked', e.target.innerText)
+// })
+
+document.getElementById("parent").addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON") {
+    console.log("Clicked:", e.target.innerText);
+  }
+});
